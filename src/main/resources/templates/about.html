@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda | PayNes</title>
+
+    <link rel="stylesheet" th:href="@{/css/global.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/about.css}">
+</head>
+<body>
+
+<!-- ✅ Ortak Navbar -->
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<!-- ✅ Hakkımızda Bölümü -->
+<section class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="text">
+                <h1>Hakkımızda</h1>
+                <p>
+                    <strong>PayNes</strong>, akıllı ödeme sistemleri alanında Türkiye’nin önde gelen teknolojik çözümlerini sunan bir şirkettir.
+                    Müşterilerimizin işlerini kolaylaştırmak, dijitalleşme süreçlerini hızlandırmak ve güvenli ödeme altyapıları sağlamak için
+                    yenilikçi ürünler geliştiriyoruz.
+                </p>
+                <p>
+                    Ürünlerimiz; otomat sistemlerinden araç yıkama istasyonlarına kadar geniş bir yelpazede kullanılmaktadır.
+                    Kullanıcı dostu arayüzlerimiz, güçlü güvenlik altyapımız ve kolay entegrasyon seçeneklerimiz sayesinde
+                    PayNes işletmelere zaman ve maliyet avantajı sağlar.
+                </p>
+            </div>
+            <div class="image">
+                <img src="/images/about-image.png" alt="PayNes ekibi veya cihaz görseli">
+            </div>
+        </div>
+    </div>
+</section>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>

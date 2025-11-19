@@ -1,0 +1,14 @@
+<div th:fragment="navbar">
+    <header class="navbar">
+        <div class="logo">
+            <img src="/images/paynes.png" alt="PayNes Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a th:href="@{/}" th:classappend="${activePage == 'home'} ? 'active'">Anasayfa</a></li>
+                <li><a th:href="@{/hakkimizda}" th:classappend="${activePage == 'about'} ? 'active'">Hakkımızda</a></li>
+                <li><a th:href="@{/iletisim}" th:classappend="${activePage == 'contact'} ? 'active'">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>

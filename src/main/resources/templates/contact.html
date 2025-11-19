@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | PayNes</title>
+
+    <link rel="stylesheet" th:href="@{/css/global.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/contact.css}">
+</head>
+<body>
+
+<!-- Navbar -->
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<section class="contact">
+    <div class="container">
+        <h1>Bizimle İletişime Geçin</h1>
+        <p>
+            PayNes ekibi olarak size yardımcı olmaktan mutluluk duyarız.<br>
+            Aşağıdaki formu doldurarak bizimle iletişime geçebilirsiniz.
+        </p>
+
+        <form class="contact-form" th:action="@{/iletisim}" method="post">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Adınız Soyadınız" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="E-posta Adresiniz" required>
+            </div>
+            <div class="form-group">
+                <textarea name="message" rows="5" placeholder="Mesajınız" required></textarea>
+            </div>
+            <button type="submit">Gönder</button>
+        </form>
+
+        <div class="contact-info">
+            <p>📍 İstanbul, Türkiye</p>
+            <p>📞 +90 555 555 55 55</p>
+            <p>✉️ info@paynes.com</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>
